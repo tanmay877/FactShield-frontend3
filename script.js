@@ -3,7 +3,7 @@ let currentScore = 0;
 function checkCredibility() {
     const text = document.getElementById("news").value;
 
-    fetch("https://factshield-backend.onrender.com/check", {
+    fetch("https://fact-shield-z9et.vercel.app/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ content: text })
@@ -48,4 +48,5 @@ function shareAnyway() {
         }
     }
 }
+
 
