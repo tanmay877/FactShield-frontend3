@@ -3,10 +3,10 @@ let currentScore = 0;
 function checkCredibility() {
     const text = document.getElementById("news").value;
 
-    fetch("/check", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content: text })
+    fetch("https://factshield-backend.onrender.com/check", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ content: text })
     })
     .then(res => res.json())
     .then(data => {
@@ -48,3 +48,4 @@ function shareAnyway() {
         }
     }
 }
+
